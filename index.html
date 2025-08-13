@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="w-full max-w-7xl mx-auto">
+        <div id="dashboard-view" class="view-container">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="dashboard-card flex items-center justify-center p-4 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700 shadow-lg">
+                    <a href="#" id="add-users-link" class="nav-link w-full flex items-center justify-center gap-4 p-4 bg-gray-900/70 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300" data-message="Add-Users">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-400"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+                        <span class="text-xl font-semibold text-gray-200">Manage Users</span>
+                    </a>
+                </div>
+                <div class="dashboard-card flex items-center justify-center p-4 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700 shadow-lg">
+                    <a href="#" class="nav-link w-full flex items-center justify-center gap-4 p-4 bg-gray-900/70 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300" data-message="Users">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <span class="text-xl font-semibold text-gray-200">Users</span>
+                    </a>
+                </div>
+                <div class="dashboard-card flex items-center justify-center p-4 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700 shadow-lg">
+                    <a href="#" class="nav-link w-full flex items-center justify-center gap-4 p-4 bg-gray-900/70 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300" data-message="Accounting">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><rect width="8" height="8" x="14" y="14" rx="2"/><path d="M18 18h.01"/></svg>
+                        <span class="text-xl font-semibold text-gray-200">Accounting</span>
+                    </a>
+                </div>
+                <div class="dashboard-card flex flex-col gap-3 p-4 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700 shadow-lg">
+                    <a href="#" class="nav-link w-full flex items-center justify-center gap-4 p-3 bg-gray-900/70 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300" data-message="China">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-400"><path d="M4 10v10"></path><path d="M8 10v10"></path><path d="M12 10v10"></path><path d="M16 10v10"></path><path d="M20 10v10"></path><path d="M2 10h20"></path><path d="M3 6h2c2 0 2-4 4-4s2 4 4 4s2-4 4-4s2 4 4 4h1"></path></svg>
+                        <span class="text-lg font-semibold text-gray-200">China</span>
+                    </a>
+                    <a href="#" class="nav-link w-full flex items-center justify-center p-3 bg-gray-900/70 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300" data-message="China-Accounting">
+                        <span class="text-lg font-semibold text-gray-200">China-Accounting</span>
+                    </a>
+                </div>
+                <div class="dashboard-card flex flex-col gap-3 p-4 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700 shadow-lg">
+                    <a href="#" class="nav-link w-full flex items-center justify-center gap-4 p-3 bg-gray-900/70 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300" data-message="World">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        <span class="text-lg font-semibold text-gray-200">World</span>
+                    </a>
+                    <a href="#" class="nav-link w-full flex items-center justify-center p-3 bg-gray-900/70 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300" data-message="World-Accounting">
+                        <span class="text-lg font-semibold text-gray-200">World-Accounting</span>
+                    </a>
+                </div>
+                <div class="dashboard-card flex flex-col gap-3 p-4 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700 shadow-lg">
+                    <a href="#" class="nav-link w-full flex items-center justify-center gap-4 p-3 bg-gray-900/70 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300" data-message="Rest-Of-The-World">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-400"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span class="text-lg font-semibold text-gray-200">Rest-Of-The-World</span>
+                    </a>
+                    <a href="#" class="nav-link w-full flex items-center justify-center p-3 bg-gray-900/70 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300" data-message="R.O.T.W-Accounting">
+                        <span class="text-lg font-semibold text-gray-200">R.O.T.W-Accounting</span>
+                    </a>
+                </div>
+                <div class="dashboard-card flex items-center justify-center p-4 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700 shadow-lg">
+                    <a href="#" class="nav-link w-full flex items-center justify-center gap-4 p-4 bg-gray-900/70 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300" data-message="Payment receipts">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-400"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+                        <span class="text-xl font-semibold text-gray-200">Payment receipts</span>
+                    </a>
+                </div>
+                <div class="dashboard-card flex flex-col gap-3 p-4 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700 shadow-lg">
+                    <a href="#" class="nav-link w-full flex items-center justify-center gap-4 p-3 bg-gray-900/70 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300" data-message="Expenses">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-400"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        <span class="text-lg font-semibold text-gray-200">Expenses</span>
+                    </a>
+                    <a href="#" class="nav-link w-full flex items-center justify-center p-3 bg-gray-900/70 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300" data-message="Total-Expenses">
+                        <span class="text-lg font-semibold text-gray-200">Total-Expenses</span>
+                    </a>
+                </div>
+                <div class="dashboard-card flex items-center justify-center p-4 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700 shadow-lg">
+                    <a href="#" class="nav-link w-full flex items-center justify-center gap-4 p-4 bg-gray-900/70 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300" data-message="DataBase-Backup">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/><path d="M12 19.5V22"/><path d="m7 19 3-4"/><path d="m17 19-3-4"/></svg>
+                        <span class="text-xl font-semibold text-gray-200">DataBase-Backup</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="add-user-view" class="hidden view-container">
+        <div class="bg-gray-900/50 rounded-2xl border border-gray-700 shadow-lg p-4 sm:p-8 h-full flex flex-col">
+            <div class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
+                <div class="flex items-center">
+                    <button id="back-to-dashboard" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <h2 class="text-3xl font-bold text-white ml-4">User Management</h2>
+                </div>
+                <button type="button" id="open-modal-btn" class="w-full sm:w-auto p-3 bg-teal-600 rounded-lg text-white font-semibold hover:bg-teal-700 transition-all flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add New User
+                </button>
+            </div>
+            <div class="mb-4">
+                <input type="text" id="manage-users-search" placeholder="Search by User-Code or Full Name" class="w-full p-3 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500" />
+            </div>
+            <div class="overflow-auto flex-grow">
+                <table class="w-full text-white text-left">
+                    <thead class="sticky top-0 bg-gray-900/70 backdrop-blur-sm">
+                        <tr>
+                            <th class="p-3">User-Code</th>
+                            <th class="p-3">Full-Name</th>
+                            <th class="p-3">Phone-No1</th>
+                            <th class="p-3">Phone-No2</th>
+                            <th class="p-3">City</th>
+                            <th class="p-3">Neighborhood</th>
+                            <th class="p-3">Address</th>
+                            <th class="p-3">Close-Place</th>
+                            <th class="p-3 text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table-body" class="divide-y divide-gray-700">
+                        <tr data-user-code="001" class="hover:bg-gray-700/50 transition-colors">
+                            <td class="p-3" data-label="user-code">001</td>
+                            <td class="p-3" data-label="full-name">John Doe</td>
+                            <td class="p-3" data-label="phone-no1">555-1234</td>
+                            <td class="p-3" data-label="phone-no2"></td>
+                            <td class="p-3" data-label="city">New York</td>
+                            <td class="p-3" data-label="neighborhood">Manhattan</td>
+                            <td class="p-3" data-label="address">123 Main St</td>
+                            <td class="p-3" data-label="close-place">Near Park</td>
+                            <td class="p-3 text-center space-x-2">
+                                <button class="edit-btn p-2 bg-yellow-500 rounded-none text-white hover:bg-yellow-600 transition-all" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="delete-btn p-2 bg-red-600 rounded-none text-white hover:bg-red-700 transition-all" title="Delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="users-view" class="hidden view-container">
+        <div class="bg-gray-900/50 rounded-2xl border border-gray-700 shadow-lg p-4 sm:p-8 h-full flex flex-col">
+            <div class="flex items-center justify-between mb-6 gap-4">
+                <div class="flex items-center gap-4">
+                    <button id="users-back" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <h2 class="text-3xl font-bold text-white">Users</h2>
+                </div>
+                <button id="users-orders-btn" disabled class="p-3 bg-blue-600 rounded-lg text-white font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed">Orders</button>
+            </div>
+            <div class="mb-4">
+                <input type="text" id="users-search" placeholder="Search by User Code or Full Name" class="w-full p-3 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500" />
+            </div>
+            <div class="overflow-auto flex-grow min-h-0">
+                <table class="w-full text-white text-left">
+                    <thead class="sticky top-0 bg-gray-900/70 backdrop-blur-sm">
+                        <tr>
+                            <th class="p-3">User-Code</th>
+                            <th class="p-3">Full-Name</th>
+                            <th class="p-3">Phone-No1</th>
+                            <th class="p-3">Phone-No2</th>
+                            <th class="p-3">City</th>
+                            <th class="p-3">Neighborhood</th>
+                            <th class="p-3">Address</th>
+                            <th class="p-3">Close-Place</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-table-body" class="divide-y divide-gray-700">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="orders-view" class="hidden view-container">
+        <div class="bg-gray-900/50 rounded-2xl border border-gray-700 shadow-lg p-4 sm:p-8 h-full flex flex-col">
+            <div class="flex items-center justify-between mb-6 gap-4">
+                <div class="flex items-center gap-4">
+                    <button id="orders-back" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <div>
+                        <h2 id="orders-title" class="text-3xl font-bold text-white">Orders</h2>
+                        <p id="orders-user-code" class="text-gray-400 font-semibold"></p>
+                    </div>
+                </div>
+                <button id="add-order-btn" class="p-3 bg-blue-600 rounded-lg text-white font-semibold hover:bg-blue-700 transition-all">Add New Order</button>
+            </div>
+            <div class="mb-4">
+                <input type="text" id="orders-search" placeholder="Search by Track-no" class="w-full p-3 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500" />
+            </div>
+            <div id="orders-table-wrapper" class="overflow-x-auto overflow-y-hidden flex-grow">
+                <table id="orders-table" class="w-full border-collapse text-white">
+                    <thead class="sticky top-0">
+                        <tr>
+                                                        <th class="table-header">Track-no</th>
+                            <th class="table-header">Country</th>
+                            <th class="table-header">Company Name</th>
+                            <th class="table-header">weight</th>
+                            <th class="table-header">P-per-kg</th>
+                            <th class="table-header">Shipping-Cost</th>
+                            <th class="table-header">in-ship-cost</th>
+                            <th class="table-header">in-shipping</th>
+                            <th class="table-header">purches prof</th>
+                            <th class="table-header">Mo-received</th>
+                            <th class="table-header">Total-Profit</th>
+                            <th class="table-header">Date-arrival</th>
+                            <th class="table-header">Cash-Back</th>
+                            <th class="table-header">Date</th>
+                        <th class="table-header">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-table-body">
+                        <tr class="hover:bg-gray-800/50">
+                                                        <td class="table-cell">TRACK123</td>
+                            <td class="table-cell"></td>
+                            <td class="table-cell"></td>
+                            <td class="table-cell">5.2</td>
+                            <td class="table-cell">10.00</td>
+                            <td class="table-cell">52.00</td>
+                            <td class="table-cell">5.00</td>
+                            <td class="table-cell">57.00</td>
+                            <td class="table-cell">20.00</td>
+                            <td class="table-cell">100.00</td>
+                            <td class="table-cell">23.00</td>
+                            <td class="table-cell">2025-08-15</td>
+                            <td class="table-cell">5.00</td>
+                            <td class="table-cell">2025-08-10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="accounting-view" class="hidden view-container">
+        <div class="bg-gray-900/50 rounded-2xl border border-gray-700 shadow-lg p-4 sm:p-8 h-full flex flex-col">
+            <div class="flex items-center justify-between mb-6 gap-4">
+                <div class="flex items-center gap-4">
+                    <button id="accounting-back" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <h2 class="text-3xl font-bold text-white">Accounting</h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+                <div>
+                    <label for="acct-date-from" class="text-gray-300 text-sm">From (Order-Date)</label>
+                    <input type="date" id="acct-date-from" class="w-full p-2 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500" />
+                </div>
+                <div>
+                    <label for="acct-date-to" class="text-gray-300 text-sm">To (Order-Date)</label>
+                    <input type="date" id="acct-date-to" class="w-full p-2 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500" />
+                </div>
+                <div class="flex items-end">
+                    <button type="button" id="acct-clear-filters" class="px-3 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-500 w-full">Clear Filters</button>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-white mb-2">Totals (Filtered)</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">weight</div><div id="acct-total-weight" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Shipping-Cost</div><div id="acct-total-shipping" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">in-shipping</div><div id="acct-total-inshipping" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Purches-Fee</div><div id="acct-total-purches" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Mo-received</div><div id="acct-total-moreceived" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Total-Profit</div><div id="acct-total-profit" class="text-white font-semibold">0</div></div>
+                </div>
+            </div>
+
+            <div class="flex-grow overflow-auto">
+                <table class="w-full border-collapse text-white">
+                    <thead class="sticky top-0">
+                        <tr>
+                            <th class="table-header">Track-no</th>
+                            <th class="table-header">weight</th>
+                            <th class="table-header">Shipping-Cost</th>
+                            <th class="table-header">in-shipping</th>
+                            <th class="table-header">Purches-Fee</th>
+                            <th class="table-header">Mo-received</th>
+                            <th class="table-header">Total-Profit</th>
+                            <th class="table-header">Date-Arrival</th>
+                        </tr>
+                    </thead>
+                    <tbody id="acct-summary-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- China View -->
+    <div id="china-view" class="hidden view-container">
+        <div class="bg-gray-900 rounded-2xl border border-gray-700 shadow-lg p-4 sm:p-6 h-full flex flex-col text-white">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-4 gap-4">
+                <div class="flex items-center gap-4">
+                    <button id="china-back" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">China</h2>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <div class="mb-4">
+                <input type="text" id="china-search" placeholder="Search by Track-no or Cus-NAME" class="w-full p-3 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500">
+            </div>
+
+            <!-- Form Grid removed as requested -->
+
+            <!-- Footer Actions -->
+            <div class="flex items-center justify-between mt-4">
+                <div class="flex items-center gap-2">
+                    <button id="china-add-btn" class="px-4 py-2 bg-green-600 rounded-lg text-white font-semibold hover:bg-green-700">Add to China</button>
+                    <button id="china-drafts-btn" class="px-4 py-2 bg-white text-black font-bold rounded-lg hover:bg-gray-200">Drafts</button>
+                    <button id="new-draft-btn" class="px-4 py-2 bg-gray-700 rounded-lg text-white font-semibold hover:bg-gray-600">New Draft</button>
+                </div>
+            </div>
+            <!-- Records Table -->
+            <div id="china-table-wrapper" class="mt-4 overflow-x-auto overflow-y-auto">
+                <table class="w-full border-collapse text-white text-sm" id="china-table">
+                    <thead class="sticky top-0 bg-gray-800/70">
+                        <tr>
+                            <th class="table-header">Track-NO</th>
+                            <th class="table-header">Cus-NAME</th>
+                            <th class="table-header">Wh-cont-us</th>
+                            <th class="table-header">Cust-No.</th>
+                            <th class="table-header">Cust-adrss</th>
+                            <th class="table-header">Seller-Name</th>
+                            <th class="table-header">Platform</th>
+                            <th class="table-header">Product-link</th>
+                            <th class="table-header">Item-price</th>
+                            <th class="table-header">Item No-</th>
+                            <th class="table-header">China-Ship</th>
+                            <th class="table-header">Fee %3</th>
+                            <th class="table-header">China-tot-pri</th>
+                            <th class="table-header">CBM</th>
+                            <th class="table-header">CBM-PRI</th>
+                            <th class="table-header">CBM-ship-pri</th>
+                            <th class="table-header">KG</th>
+                            <th class="table-header">KG-price</th>
+                            <th class="table-header">KG-ship-pri</th>
+                            <th class="table-header">Total price</th>
+                            <th class="table-header">Pay-prof</th>
+                            <th class="table-header">Buy-prof</th>
+                            <th class="table-header">Total-Prof</th>
+                            <th class="table-header">Remedy</th>
+                            <th class="table-header">tran-comp-Name</th>
+                            <th class="table-header">Date</th>
+                            <th class="table-header">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="china-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- World View -->
+    <div id="world-view" class="hidden view-container">
+        <div class="bg-gray-900 rounded-2xl border border-gray-700 shadow-lg p-4 sm:p-6 h-full flex flex-col text-white">
+            <div class="flex items-center justify-between mb-6 gap-4">
+                <div class="flex items-center gap-4">
+                    <button id="world-back" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <h2 class="text-3xl font-bold text-white">World</h2>
+                </div>
+                <button id="world-add-btn" class="p-3 bg-blue-600 rounded-lg text-white font-semibold hover:bg-blue-700 transition-all">Add New Shipment</button>
+            </div>
+            <div class="mb-4">
+                <input type="text" id="world-search" placeholder="Search by Sender-Name" class="w-full p-3 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div id="world-table-wrapper" class="overflow-x-auto overflow-y-auto flex-grow">
+                <table id="world-table" class="w-full border-collapse text-white">
+                    <thead class="sticky top-0">
+                        <tr>
+                            <th class="table-header">Sender-Name</th>
+                            <th class="table-header">Sender-NO</th>
+                            <th class="table-header">Name-of-Recipient</th>
+                            <th class="table-header">Recipient-NO</th>
+                            <th class="table-header">Address-of-Rect</th>
+                            <th class="table-header">Weight-of-Item</th>
+                            <th class="table-header">Piece</th>
+                            <th class="table-header">Type-of-Item</th>
+                            <th class="table-header">Shipping-on-Cust</th>
+                            <th class="table-header">Shipping-Cost</th>
+                            <th class="table-header">Transfer-chrg-to-Comp</th>
+                            <th class="table-header">Sender-Comp-Name</th>
+                            <th class="table-header">Final-Profit</th>
+                            <th class="table-header">Total-Price</th>
+                            <th class="table-header">Remedy</th>
+                            <th class="table-header">Date</th>
+                            <th class="table-header">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="world-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rest of the World View -->
+    <div id="rest-of-world-view" class="hidden view-container">
+        <div class="bg-gray-900 rounded-2xl border border-gray-700 shadow-lg p-4 sm:p-6 h-full flex flex-col text-white">
+            <div class="flex items-center justify-between mb-6 gap-4">
+                <div class="flex items-center gap-4">
+                    <button id="rest-of-world-back" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <h2 class="text-3xl font-bold text-white">Rest of the World</h2>
+                </div>
+                <button id="rotw-add-btn" class="p-3 bg-orange-600 rounded-lg text-white font-semibold hover:bg-orange-700 transition-all flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add New Shipment
+                </button>
+            </div>
+            <div class="mb-4">
+                <input type="text" id="rotw-search" placeholder="Search by Track-no or Cus-Name" class="w-full p-3 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500">
+            </div>
+            <div id="rest-of-world-table-wrapper" class="overflow-x-auto overflow-y-auto flex-grow">
+                <table id="rest-of-world-table" class="w-full border-collapse text-white">
+                    <thead class="sticky top-0">
+                        <tr>
+                            <th class="table-header">Track-NO</th>
+                            <th class="table-header">Cus-NAME</th>
+                            <th class="table-header">Wh-cont-us</th>
+                            <th class="table-header">Cust-No.</th>
+                            <th class="table-header">Cust-adrss</th>
+                            <th class="table-header">Seller-Name</th>
+                            <th class="table-header">platform</th>
+                            <th class="table-header">Product-link</th>
+                            <th class="table-header">Item-price</th>
+                            <th class="table-header">Item No-</th>
+                            <th class="table-header">shipment</th>
+                            <th class="table-header">Fee %3</th>
+                            <th class="table-header">Remedy</th>
+                            <th class="table-header">Ship-to-KRD</th>
+                            <th class="table-header">Total price</th>
+                            <th class="table-header">Pay-prof</th>
+                            <th class="table-header">Buy-prof</th>
+                            <th class="table-header">Total-Prof</th>
+                            <th class="table-header">Date</th>
+                            <th class="table-header">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rest-of-world-table-body">
+                        <!-- Example Row is now removed and will be generated by script.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- China Accounting View -->
+    <div id="china-accounting-view" class="hidden view-container">
+        <div class="bg-gray-900 h-full flex flex-col p-4 sm:p-8">
+            <div class="flex items-center justify-between mb-2 gap-2">
+                <div class="flex items-center gap-4">
+                    <button id="china-acct-back" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <h2 class="text-3xl font-bold text-white">China Accounting</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
+                <div>
+                    <label for="china-acct-date-from" class="text-gray-300 text-sm">From (Date)</label>
+                    <input type="date" id="china-acct-date-from" class="w-full p-2 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500" />
+                </div>
+                <div>
+                    <label for="china-acct-date-to" class="text-gray-300 text-sm">To (Date)</label>
+                    <input type="date" id="china-acct-date-to" class="w-full p-2 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500" />
+                </div>
+                <div class="flex items-end">
+                    <button type="button" id="china-acct-clear-filters" class="px-3 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-500 w-full">Clear Filters</button>
+                </div>
+            </div>
+            <div class="mb-2">
+                <h3 class="text-xl font-semibold text-white mb-2">Totals (Filtered)</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-3">
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Item-price</div><div id="china-acct-total-itemprice" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">China-Ship</div><div id="china-acct-total-shipping" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">China-tot-pri</div><div id="china-acct-total-china" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">CBM</div><div id="china-acct-total-cbm" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">KG</div><div id="china-acct-total-kg" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Total price</div><div id="china-acct-total-totalprice" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Pay-prof</div><div id="china-acct-total-payprof" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Buy-prof</div><div id="china-acct-total-buyprof" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Total-Prof</div><div id="china-acct-total-totalprof" class="text-white font-semibold">0</div></div>
+                </div>
+            </div>
+            <div class="flex-grow overflow-auto">
+                <table class="w-full border-collapse text-white">
+                    <thead class="sticky top-0">
+                        <tr>
+                            <th class="table-header">Track-NO</th>
+                            <th class="table-header">Cus-NAME</th>
+                            <th class="table-header">Seller-Name</th>
+                            <th class="table-header">Item-price</th>
+                            <th class="table-header">China-Ship</th>
+                            <th class="table-header">China-tot-pri</th>
+                            <th class="table-header">CBM</th>
+                            <th class="table-header">KG</th>
+                            <th class="table-header">Total price</th>
+                            <th class="table-header">Pay-prof</th>
+                            <th class="table-header">Buy-prof</th>
+                            <th class="table-header">Total-Prof</th>
+                            <th class="table-header">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="china-acct-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- World Accounting View (NEW) -->
+    <div id="world-accounting-view" class="hidden view-container">
+        <div class="bg-gray-900 h-full flex flex-col p-4 sm:p-8">
+            <div class="flex items-center justify-between mb-2 gap-2">
+                <div class="flex items-center gap-4">
+                    <button id="world-acct-back" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <h2 class="text-3xl font-bold text-white">World Accounting</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
+                <div>
+                    <label for="world-acct-date-from" class="text-gray-300 text-sm">From (Date)</label>
+                    <input type="date" id="world-acct-date-from" class="w-full p-2 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500" />
+                </div>
+                <div>
+                    <label for="world-acct-date-to" class="text-gray-300 text-sm">To (Date)</label>
+                    <input type="date" id="world-acct-date-to" class="w-full p-2 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500" />
+                </div>
+                <div class="flex items-end">
+                    <button type="button" id="world-acct-clear-filters" class="px-3 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-500 w-full">Clear Filters</button>
+                </div>
+            </div>
+            <div class="mb-2">
+                <h3 class="text-xl font-semibold text-white mb-2">Totals (Filtered)</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Weight-of-Item</div><div id="world-acct-total-weight" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Shipping-on-Cust</div><div id="world-acct-total-shippingoncust" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Shipping-Cost</div><div id="world-acct-total-shippingcost" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Transfer-chrg-to-Comp</div><div id="world-acct-total-transfercharge" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Final-Profit</div><div id="world-acct-total-finalprofit" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Total-Price</div><div id="world-acct-total-totalprice" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Remedy</div><div id="world-acct-total-remedy" class="text-white font-semibold">0</div></div>
+                </div>
+            </div>
+            <div class="flex-grow overflow-auto">
+                <table class="w-full border-collapse text-white">
+                    <thead class="sticky top-0">
+                        <tr>
+                            <th class="table-header">Sender-Name</th>
+                            <th class="table-header">Recipient-Name</th>
+                            <th class="table-header">Weight-of-Item</th>
+                            <th class="table-header">Shipping-on-Cust</th>
+                            <th class="table-header">Shipping-Cost</th>
+                            <th class="table-header">Transfer-chrg-to-Comp</th>
+                            <th class="table-header">Sender-Comp-Name</th>
+                            <th class="table-header">Final-Profit</th>
+                            <th class="table-header">Total-Price</th>
+                            <th class="table-header">Remedy</th>
+                        </tr>
+                    </thead>
+                    <tbody id="world-acct-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- R.O.T.W Accounting View (NEW) -->
+    <div id="rotw-accounting-view" class="hidden view-container">
+        <div class="bg-gray-900 h-full flex flex-col p-4 sm:p-8">
+            <div class="flex items-center justify-between mb-2 gap-2">
+                <div class="flex items-center gap-4">
+                    <button id="rotw-acct-back" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <h2 class="text-3xl font-bold text-white">R.O.T.W Accounting</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
+                <div>
+                    <label for="rotw-acct-date-from" class="text-gray-300 text-sm">From (Date)</label>
+                    <input type="date" id="rotw-acct-date-from" class="w-full p-2 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500" />
+                </div>
+                <div>
+                    <label for="rotw-acct-date-to" class="text-gray-300 text-sm">To (Date)</label>
+                    <input type="date" id="rotw-acct-date-to" class="w-full p-2 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500" />
+                </div>
+                <div class="flex items-end">
+                    <button type="button" id="rotw-acct-clear-filters" class="px-3 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-500 w-full">Clear Filters</button>
+                </div>
+            </div>
+            <div class="mb-2">
+                <h3 class="text-xl font-semibold text-white mb-2">Totals (Filtered)</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Item-Price</div><div id="rotw-acct-total-itemprice" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Remedy</div><div id="rotw-acct-total-remedy" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Ship-To-KRD</div><div id="rotw-acct-total-shiptokrd" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Total-Price</div><div id="rotw-acct-total-totalprice" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Pay-Prof</div><div id="rotw-acct-total-payprof" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Buy-Prof</div><div id="rotw-acct-total-buyprof" class="text-white font-semibold">0</div></div>
+                    <div class="bg-gray-800/60 border border-gray-700 rounded-lg p-3"><div class="text-gray-400 text-xs">Total-Prof</div><div id="rotw-acct-total-totalprof" class="text-white font-semibold">0</div></div>
+                </div>
+            </div>
+            <div class="flex-grow overflow-auto">
+                <table class="w-full border-collapse text-white">
+                    <thead class="sticky top-0">
+                        <tr>
+                            <th class="table-header">Track-no</th>
+                            <th class="table-header">Cus-Name</th>
+                            <th class="table-header">Item-Price</th>
+                            <th class="table-header">Remedy</th>
+                            <th class="table-header">Ship-To-KRD</th>
+                            <th class="table-header">Total-Price</th>
+                            <th class="table-header">Pay-Prof</th>
+                            <th class="table-header">Buy-Prof</th>
+                            <th class="table-header">Total-Prof</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rotw-acct-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expenses View -->
+    <div id="expenses-view" class="hidden view-container">
+        <div class="bg-gray-900/50 rounded-2xl border border-gray-700 shadow-lg p-4 sm:p-8 h-full flex flex-col text-white">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6 gap-4">
+                <div class="flex items-center gap-4">
+                    <button id="expenses-back" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <h2 class="text-3xl font-bold text-white">Expenses</h2>
+                </div>
+                <button type="button" id="open-expense-modal-btn" class="p-3 bg-green-600 rounded-lg text-white font-semibold hover:bg-green-700 transition-all flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add New Expense
+                </button>
+            </div>
+
+            <!-- Accounting by Date Range -->
+            <div class="mb-6 bg-gray-800/60 p-4 rounded-lg border border-gray-700">
+                 <h3 class="text-xl font-semibold text-white mb-4">Accounting by Date Range</h3>
+                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
+                    <div>
+                        <label for="expense-date-from" class="text-gray-300 text-sm">From</label>
+                        <input type="date" id="expense-date-from" class="form-input w-full mt-1" />
+                    </div>
+                    <div>
+                        <label for="expense-date-to" class="text-gray-300 text-sm">To</label>
+                        <input type="date" id="expense-date-to" class="form-input w-full mt-1" />
+                    </div>
+                    <button type="button" id="run-expense-accounting-btn" class="w-full p-3 bg-blue-600 rounded-lg text-white font-semibold hover:bg-blue-700 transition-all">
+                        Run Accounting
+                    </button>
+                 </div>
+            </div>
+            
+            <!-- Accounting Results -->
+            <div id="expense-accounting-results" class="hidden mb-6 bg-gray-800/60 p-4 rounded-lg border border-gray-700">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold text-white">Accounting Summary</h3>
+                    <button id="close-accounting-summary-btn" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </button>
+                </div>
+                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-4">
+                    <div class="bg-gray-700/60 border border-gray-600 rounded-lg p-3"><div class="text-gray-400 text-xs">Total Rent</div><div id="acct-total-rent" class="text-white font-semibold">0.00</div></div>
+                    <div class="bg-gray-700/60 border border-gray-600 rounded-lg p-3"><div class="text-gray-400 text-xs">Total Electricity</div><div id="acct-total-electricity" class="text-white font-semibold">0.00</div></div>
+                    <div class="bg-gray-700/60 border border-gray-600 rounded-lg p-3"><div class="text-gray-400 text-xs">Total Device</div><div id="acct-total-device" class="text-white font-semibold">0.00</div></div>
+                    <div class="bg-gray-700/60 border border-gray-600 rounded-lg p-3"><div class="text-gray-400 text-xs">Total Qrtasia</div><div id="acct-total-qrtasia" class="text-white font-semibold">0.00</div></div>
+                    <div class="bg-gray-700/60 border border-gray-600 rounded-lg p-3"><div class="text-gray-400 text-xs">Total Others</div><div id="acct-total-others" class="text-white font-semibold">0.00</div></div>
+                    <div class="bg-teal-800/50 border border-teal-600 rounded-lg p-3"><div class="text-teal-300 text-xs">Grand Total</div><div id="acct-grand-total" class="text-white font-bold text-lg">0.00</div></div>
+                </div>
+                <div class="table-wrapper">
+                    <table class="w-full text-white text-left">
+                        <thead class="sticky top-0 bg-gray-900/70 backdrop-blur-sm">
+                            <tr>
+                                <th class="table-header">Rent</th>
+                                <th class="table-header">Electricity</th>
+                                <th class="table-header">Device</th>
+                                <th class="table-header">Qrtasia</th>
+                                <th class="table-header">Others</th>
+                                <th class="table-header">Total</th>
+                                <th class="table-header">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expense-accounting-table-body" class="divide-y divide-gray-700">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Expenses Table -->
+            <h3 class="text-xl font-semibold text-white mb-4">All Expenses</h3>
+            <div class="table-wrapper flex-grow">
+                <table class="w-full text-white text-left">
+                    <thead class="sticky top-0 bg-gray-900/70 backdrop-blur-sm">
+                        <tr>
+                            <th class="table-header">Rent</th>
+                            <th class="table-header">Electricity Money</th>
+                            <th class="table-header">Device</th>
+                            <th class="table-header">Qrtasia</th>
+                            <th class="table-header">Others</th>
+                            <th class="table-header">Total</th>
+                            <th class="table-header">Date</th>
+                            <th class="table-header">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expenses-table-body" class="divide-y divide-gray-700">
+                        <!-- Expense rows will be added here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Expenses View (NEW) -->
+    <div id="total-expenses-view" class="hidden view-container">
+        <div class="bg-gray-900/50 rounded-2xl border border-gray-700 shadow-lg p-4 sm:p-8 h-full flex flex-col text-white">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6 gap-4">
+                <div class="flex items-center gap-4">
+                    <button id="total-expenses-back" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <h2 class="text-3xl font-bold text-white">Total Profit & Expenses</h2>
+                </div>
+            </div>
+
+            <!-- Date Range Selection -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 bg-gray-800/60 p-4 rounded-lg border border-gray-700">
+                <div>
+                    <label for="total-summary-date-from" class="text-gray-300 text-sm">From</label>
+                    <input type="date" id="total-summary-date-from" class="form-input w-full mt-1" />
+                </div>
+                <div>
+                    <label for="total-summary-date-to" class="text-gray-300 text-sm">To</label>
+                    <input type="date" id="total-summary-date-to" class="form-input w-full mt-1" />
+                </div>
+                 <div class="flex items-end">
+                    <button type="button" id="total-summary-clear-filters" class="w-full p-3 bg-gray-600 rounded-lg text-white font-semibold hover:bg-gray-500 transition-all">
+                        Clear Filters
+                    </button>
+                </div>
+            </div>
+
+            <!-- Totals Display -->
+            <div class="flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-sky-800/50 border border-sky-600 rounded-lg p-4 flex flex-col justify-center items-center">
+                    <div class="text-sky-300 text-lg font-semibold">Total Profit Orders</div>
+                    <div id="summary-total-profit-orders" class="text-white font-bold text-4xl">0.00</div>
+                </div>
+                <div class="bg-red-800/50 border border-red-600 rounded-lg p-4 flex flex-col justify-center items-center">
+                    <div class="text-red-300 text-lg font-semibold">Total Profit China</div>
+                    <div id="summary-total-profit-china" class="text-white font-bold text-4xl">0.00</div>
+                </div>
+                 <div class="bg-green-800/50 border border-green-600 rounded-lg p-4 flex flex-col justify-center items-center">
+                    <div class="text-green-300 text-lg font-semibold">Total Profit World</div>
+                    <div id="summary-total-profit-world" class="text-white font-bold text-4xl">0.00</div>
+                </div>
+                <div class="bg-orange-800/50 border border-orange-600 rounded-lg p-4 flex flex-col justify-center items-center">
+                    <div class="text-orange-300 text-lg font-semibold">Total Profit R.O.T.W</div>
+                    <div id="summary-total-profit-rotw" class="text-white font-bold text-4xl">0.00</div>
+                </div>
+                <div class="bg-yellow-800/50 border border-yellow-600 rounded-lg p-4 flex flex-col justify-center items-center">
+                    <div class="text-yellow-300 text-lg font-semibold">Total Expenses</div>
+                    <div id="summary-total-expenses" class="text-white font-bold text-4xl">0.00</div>
+                </div>
+                 <div class="bg-teal-800/50 border border-teal-600 rounded-lg p-4 flex flex-col justify-center items-center md:col-span-2 lg:col-span-1">
+                    <div class="text-teal-300 text-lg font-semibold">Total</div>
+                    <div id="summary-net-total" class="text-white font-bold text-4xl">0.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Receipts View (NEW) -->
+    <div id="payment-receipts-view" class="hidden view-container">
+        <div class="bg-gray-900/50 rounded-2xl border border-gray-700 shadow-lg p-4 sm:p-8 h-full flex flex-col text-white">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6 gap-4">
+                <div class="flex items-center gap-4">
+                    <button id="payment-receipts-back" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <h2 class="text-3xl font-bold text-white">Payment Receipts</h2>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button type="button" id="open-payment-receipt-modal-btn" class="p-3 bg-green-600 rounded-lg text-white font-semibold hover:bg-green-700 transition-all flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        Add New Receipt
+                    </button>
+                    <button type="button" id="print-receipts-btn" class="p-3 bg-blue-600 rounded-lg text-white font-semibold hover:bg-blue-700 transition-all flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                        Printer
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search Bar (NEW) -->
+            <div class="mb-4">
+                <input type="text" id="payment-receipts-search" placeholder="Search by Name" class="w-full p-3 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500" />
+            </div>
+
+            <!-- Receipts Table -->
+            <div class="table-wrapper flex-grow">
+                <table class="w-full text-white text-left">
+                    <thead class="sticky top-0 bg-gray-900/70 backdrop-blur-sm">
+                        <tr>
+                            <th class="table-header">Name</th>
+                            <th class="table-header">Phone-No</th>
+                            <th class="table-header">IQD</th>
+                            <th class="table-header">USD</th>
+                            <th class="table-header">Type-of-Work</th>
+                            <th class="table-header">Note</th>
+                            <th class="table-header">Total</th>
+                            <th class="table-header">Date</th>
+                            <th class="table-header">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="payment-receipts-table-body" class="divide-y divide-gray-700">
+                        <!-- Receipt rows will be added here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="china-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-2xl border border-gray-700 shadow-2xl w-full max-w-3xl p-6 transform scale-95 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-white">China Entry Details</h2>
+                <button id="china-modal-close-btn" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <div id="china-modal-body" class="text-gray-100 text-sm space-y-2"></div>
+            <div class="flex justify-end gap-3 mt-6">
+                <button id="china-modal-cancel" class="px-4 py-2 bg-gray-600 rounded-lg text-white hover:bg-gray-500">Close</button>
+                <button id="china-modal-save" class="px-4 py-2 bg-green-600 rounded-lg text-white hover:bg-green-700">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="world-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-2xl border border-gray-700 shadow-2xl w-full max-w-3xl p-6 transform scale-95 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-4">
+                <h2 id="world-modal-title" class="text-2xl font-bold text-white">Add Shipment</h2>
+                <button id="world-modal-close" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <form id="world-form" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <input id="world-edit-idx" type="hidden" />
+                <div><label class="text-gray-300 text-sm">Sender-Name</label><input id="world-senderName" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Sender-NO</label><input id="world-senderNo" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Name-of-Recipient</label><input id="world-recipientName" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Recipient-NO</label><input id="world-recipientNo" type="text" class="form-input w-full"/></div>
+                <div class="sm:col-span-2"><label class="text-gray-300 text-sm">Address-of-Rect</label><input id="world-recipientAddress" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Weight-of-Item</label><input id="world-itemWeight" type="number" step="0.01" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Piece</label><input id="world-piece" type="number" step="1" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Type-of-Item</label><input id="world-itemType" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Shipping-on-Cust</label><input id="world-shippingOnCustomer" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Shipping-Cost</label><input id="world-shippingCost" type="number" step="0.01" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Transfer-chrg-to-Comp</label><input id="world-transferChargeToCompany" type="number" step="0.01" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Sender-Comp-Name</label><input id="world-senderCompanyName" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Final-Profit</label><input id="world-finalProfit" type="number" step="0.01" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Total-Price</label><input id="world-totalPrice" type="number" step="0.01" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Remedy</label><input id="world-remedy" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Date</label><input id="world-date" type="date" class="form-input w-full"/></div>
+                
+                <!-- Image Upload Section -->
+                <div class="sm:col-span-2 space-y-4">
+                    <!-- Image 1 -->
+                    <div class="image-upload-container">
+                        <label class="text-gray-300 text-sm">Image 1</label>
+                        <input id="world-image1" type="file" accept="image/*" class="form-input w-full file:mr-4 file:py-1 file:px-2 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-600 file:text-gray-200 hover:file:bg-gray-500"/>
+                        <div class="mt-2 relative">
+                            <img id="world-image1-preview" src="" class="image-preview rounded-md hidden"/>
+                            <button type="button" id="world-remove-image1-btn" class="remove-image-btn absolute top-1 right-1 bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-red-700 hidden" title="Remove Image">&times;</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Image 2 -->
+                    <div class="image-upload-container">
+                        <label class="text-gray-300 text-sm">Image 2</label>
+                        <input id="world-image2" type="file" accept="image/*" class="form-input w-full file:mr-4 file:py-1 file:px-2 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-600 file:text-gray-200 hover:file:bg-gray-500"/>
+                         <div class="mt-2 relative">
+                            <img id="world-image2-preview" src="" class="image-preview rounded-md hidden"/>
+                            <button type="button" id="world-remove-image2-btn" class="remove-image-btn absolute top-1 right-1 bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-red-700 hidden" title="Remove Image">&times;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sm:col-span-2 flex justify-end gap-3 mt-4">
+                    <button type="button" id="world-cancel" class="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-500">Cancel</button>
+                    <button type="submit" id="world-save" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Rest of the World Modal -->
+    <div id="rotw-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-2xl border border-gray-700 shadow-2xl w-full max-w-3xl p-6 transform scale-95 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-4">
+                <h2 id="rotw-modal-title" class="text-2xl font-bold text-white">Add New Shipment</h2>
+                <button id="rotw-modal-close" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <form id="rotw-form" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <input id="rotw-edit-idx" type="hidden" />
+                <!-- Input fields based on table headers -->
+                <div><label class="text-gray-300 text-sm">Track-NO</label><input id="rotw-trackNo" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Cus-NAME</label><input id="rotw-customerName" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Wh-cont-us</label><input id="rotw-warehouseContact" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Cust-No.</label><input id="rotw-customerNo" type="text" class="form-input w-full"/></div>
+                <div class="sm:col-span-2"><label class="text-gray-300 text-sm">Cust-adrss</label><input id="rotw-customerAddress" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Seller-Name</label><input id="rotw-sellerName" type="text" class="form-input w-full"/></div>
+                <div>
+                    <label class="text-gray-300 text-sm">platform</label>
+                    <input id="rotw-platform" type="text" class="form-input w-full" placeholder="e.g., Amazon, eBay..."/>
+                </div>
+                <div><label class="text-gray-300 text-sm">Product-link</label><input id="rotw-productLink" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Item-price</label><input id="rotw-itemPrice" type="number" step="0.01" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Item No-</label><input id="rotw-itemNo" type="number" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">shipment</label><input id="rotw-shipment" type="number" step="0.01" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Fee %3</label><input id="rotw-fee" type="number" step="0.01" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Remedy</label><input id="rotw-remedy" type="text" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Ship-to-KRD</label><input id="rotw-shipToKrd" type="number" step="0.01" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Total price</label><input id="rotw-totalPrice" type="number" step="0.01" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Pay-prof</label><input id="rotw-payProf" type="number" step="0.01" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Buy-prof</label><input id="rotw-buyProf" type="number" step="0.01" class="form-input w-full"/></div>
+                <div><label class="text-gray-300 text-sm">Total-Prof</label><input id="rotw-totalProf" type="number" step="0.01" class="form-input w-full"/></div>
+                 <div><label class="text-gray-300 text-sm">Date</label><input id="rotw-date" type="date" class="form-input w-full"/></div>
+
+                <div class="sm:col-span-2 flex justify-end gap-3 mt-4">
+                    <button type="button" id="rotw-cancel" class="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-500">Cancel</button>
+                    <button type="submit" id="rotw-save" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Image Viewer Modal -->
+    <div id="image-viewer-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-2xl border border-gray-700 shadow-2xl w-full max-w-6xl p-6 transform scale-95 max-h-[90vh] flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-white">Shipment Images</h2>
+                <button id="image-viewer-close" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <div class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-4 overflow-auto">
+                <div class="flex flex-col items-center">
+                    <h3 class="text-lg font-semibold mb-2">Image 1</h3>
+                    <img id="viewer-image1" src="" class="rounded-lg object-contain max-w-full max-h-full"/>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h3 class="text-lg font-semibold mb-2">Image 2</h3>
+                    <img id="viewer-image2" src="" class="rounded-lg object-contain max-w-full max-h-full"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="drafts-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-2xl border border-gray-700 shadow-2xl w-full max-w-5xl p-6 transform scale-95 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-white">Drafts</h2>
+                <button id="drafts-modal-close-btn" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <div id="drafts-modal-body" class="text-gray-100 text-sm"></div>
+            <div class="flex justify-end gap-3 mt-6">
+                <button id="drafts-modal-cancel" class="px-4 py-2 bg-gray-600 rounded-lg text-white hover:bg-gray-500">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="drafts-view-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-2xl border border-gray-700 shadow-2xl w-full max-w-3xl p-6 transform scale-95 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-white">Draft Details</h2>
+                <button id="drafts-view-modal-close-btn" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <div id="drafts-view-modal-body" class="text-gray-100 text-sm space-y-2"></div>
+            <div class="flex justify-end gap-3 mt-6">
+                <button id="drafts-view-modal-cancel" class="px-4 py-2 bg-gray-600 rounded-lg text-white hover:bg-gray-500">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="user-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-2xl border border-gray-700 shadow-2xl w-full max-w-md p-8 transform scale-95">
+            <h2 id="modal-title" class="text-3xl font-bold text-white mb-6">Add New User</h2>
+            <form id="add-user-form" class="space-y-4">
+                 <input type="hidden" id="edit-user-code">
+                 <div>
+                    <label class="text-sm font-medium text-gray-300" for="user-code">User-Code:</label>
+                    <input type="text" id="user-code" class="w-full p-3 bg-gray-700/50 border-2 border-transparent focus:border-teal-400 rounded-lg text-white placeholder-gray-400 focus:outline-none transition-all">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="full-name">Full-Name:</label>
+                    <input type="text" id="full-name" class="w-full p-3 bg-gray-700/50 border-2 border-transparent focus:border-teal-400 rounded-lg text-white placeholder-gray-400 focus:outline-none transition-all">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="phone-no1">Phone-No1:</label>
+                    <input type="text" id="phone-no1" class="w-full p-3 bg-gray-700/50 border-2 border-transparent focus:border-teal-400 rounded-lg text-white placeholder-gray-400 focus:outline-none transition-all">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="phone-no2">Phone-No2: <span class="text-xs text-gray-400">optional</span></label>
+                    <input type="text" id="phone-no2" class="w-full p-3 bg-gray-700/50 border-2 border-transparent focus:border-teal-400 rounded-lg text-white placeholder-gray-400 focus:outline-none transition-all">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="city">City:</label>
+                    <input type="text" id="city" class="w-full p-3 bg-gray-700/50 border-2 border-transparent focus:border-teal-400 rounded-lg text-white placeholder-gray-400 focus:outline-none transition-all">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="neighborhood">Neighborhood: <span class="text-xs text-gray-400">optional</span></label>
+                    <input type="text" id="neighborhood" class="w-full p-3 bg-gray-700/50 border-2 border-transparent focus:border-teal-400 rounded-lg text-white placeholder-gray-400 focus:outline-none transition-all">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="address">Address:</label>
+                    <input type="text" id="address" class="w-full p-3 bg-gray-700/50 border-2 border-transparent focus:border-teal-400 rounded-lg text-white placeholder-gray-400 focus:outline-none transition-all">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="close-place">Close-Place: <span class="text-xs text-gray-400">optional</span></label>
+                    <input type="text" id="close-place" class="w-full p-3 bg-gray-700/50 border-2 border-transparent focus:border-teal-400 rounded-lg text-white placeholder-gray-400 focus:outline-none transition-all">
+                </div>
+                <div class="flex justify-end items-center gap-4 pt-4">
+                    <button type="button" id="cancel-btn" class="px-6 py-2 bg-gray-600 rounded-lg text-white hover:bg-gray-700 transition-all">Cancel</button>
+                    <button type="submit" id="form-submit-btn" class="px-6 py-2 bg-green-600 rounded-lg text-white hover:bg-green-700 transition-all">Add User</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Add Expense Modal -->
+    <div id="expense-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-2xl border border-gray-700 shadow-2xl w-full max-w-lg p-8 transform scale-95">
+            <h2 id="expense-modal-title" class="text-3xl font-bold text-white mb-6">Add New Expense</h2>
+            <form id="add-expense-form" class="space-y-4">
+                 <input type="hidden" id="edit-expense-id">
+                 <div>
+                    <label class="text-sm font-medium text-gray-300" for="expense-date">Date</label>
+                    <input type="date" id="expense-date" class="form-input w-full mt-1">
+                </div>
+                 <div>
+                    <label class="text-sm font-medium text-gray-300" for="expense-rent">Rent</label>
+                    <input type="number" id="expense-rent" placeholder="0.00" class="form-input w-full mt-1">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="expense-electricity">Electricity Money</label>
+                    <input type="number" id="expense-electricity" placeholder="0.00" class="form-input w-full mt-1">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="expense-device">Device</label>
+                    <input type="number" id="expense-device" placeholder="0.00" class="form-input w-full mt-1">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="expense-qrtasia">Qrtasia</label>
+                    <input type="number" id="expense-qrtasia" placeholder="0.00" class="form-input w-full mt-1">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="expense-others">Others</label>
+                    <input type="number" id="expense-others" placeholder="0.00" class="form-input w-full mt-1">
+                </div>
+                <div class="flex justify-end items-center gap-4 pt-4">
+                    <button type="button" id="cancel-expense-btn" class="px-6 py-2 bg-gray-600 rounded-lg text-white hover:bg-gray-700 transition-all">Cancel</button>
+                    <button type="submit" id="submit-expense-btn" class="px-6 py-2 bg-green-600 rounded-lg text-white hover:bg-green-700 transition-all">Add Expense</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Payment Receipt Modal (NEW) -->
+    <div id="payment-receipt-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-2xl border border-gray-700 shadow-2xl w-full max-w-lg p-8 transform scale-95">
+            <h2 id="payment-receipt-modal-title" class="text-3xl font-bold text-white mb-6">Add New Receipt</h2>
+            <form id="payment-receipt-form" class="space-y-4">
+                 <input type="hidden" id="edit-receipt-id">
+                 <div>
+                    <label class="text-sm font-medium text-gray-300" for="receipt-name">Name</label>
+                    <input type="text" id="receipt-name" class="form-input w-full mt-1">
+                </div>
+                 <div>
+                    <label class="text-sm font-medium text-gray-300" for="receipt-phone-no">Phone-No</label>
+                    <input type="text" id="receipt-phone-no" class="form-input w-full mt-1">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="receipt-iqd">IQD</label>
+                    <input type="number" id="receipt-iqd" placeholder="0.00" class="form-input w-full mt-1">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="receipt-usd">USD</label>
+                    <input type="number" id="receipt-usd" placeholder="0.00" class="form-input w-full mt-1">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="receipt-type-of-work">Type-of-Work</label>
+                    <input type="text" id="receipt-type-of-work" class="form-input w-full mt-1">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="receipt-note">Note</label>
+                    <textarea id="receipt-note" class="form-input w-full mt-1" rows="3"></textarea>
+                </div>
+                 <div>
+                    <label class="text-sm font-medium text-gray-300" for="receipt-total">Total</label>
+                    <input type="number" id="receipt-total" placeholder="0.00" class="form-input w-full mt-1">
+                </div>
+                <div>
+                    <label class="text-sm font-medium text-gray-300" for="receipt-date">Date</label>
+                    <input type="date" id="receipt-date" class="form-input w-full mt-1">
+                </div>
+                <div class="flex justify-end items-center gap-4 pt-4">
+                    <button type="button" id="cancel-payment-receipt-btn" class="px-6 py-2 bg-gray-600 rounded-lg text-white hover:bg-gray-700 transition-all">Cancel</button>
+                    <button type="submit" id="submit-payment-receipt-btn" class="px-6 py-2 bg-green-600 rounded-lg text-white hover:bg-green-700 transition-all">Add Receipt</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="user-details-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-2xl border border-gray-700 shadow-2xl w-full max-w-3xl p-6 transform scale-95">
+            <div class="flex items-center justify-between mb-4">
+                <h2 id="details-user-title" class="text-2xl font-bold text-white">User Details</h2>
+                <button id="user-details-close-btn" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 text-gray-200">
+                <div><span class="text-gray-400">User-Code: </span><span id="details-code"></span></div>
+                <div><span class="text-gray-400">Full-Name: </span><span id="details-name"></span></div>
+                <div><span class="text-gray-400">Phone-No1: </span><span id="details-phone1"></span></div>
+                <div><span class="text-gray-400">Phone-No2: </span><span id="details-phone2"></span></div>
+                <div><span class="text-gray-400">City: </span><span id="details-city"></span></div>
+                <div><span class="text-gray-400">Neighborhood: </span><span id="details-neighborhood"></span></div>
+                <div class="sm:col-span-2"><span class="text-gray-400">Address: </span><span id="details-address"></span></div>
+                <div class="sm:col-span-2"><span class="text-gray-400">Close-Place: </span><span id="details-closeplace"></span></div>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold text-white mb-2">Orders</h3>
+                <div class="overflow-auto max-h-[40vh]">
+                    <table class="w-full text-white text-left">
+                        <thead class="sticky top-0 bg-gray-900/70 backdrop-blur-sm">
+                            <tr>
+                                <th class="p-2">Order ID</th>
+                                <th class="p-2">Date</th>
+                                <th class="p-2">Amount</th>
+                                <th class="p-2">Status</th>
+                                <th class="p-2 text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="details-orders-body" class="divide-y divide-gray-700"></tbody>
+                    </table>
+                </div>
+            </div>
+            <form id="add-order-form" class="grid grid-cols-1 sm:grid-cols-5 gap-3">
+                <input type="text" id="new-order-id" placeholder="Order ID" class="p-2 bg-gray-700/50 border border-gray-600 rounded text-white placeholder-gray-400" required />
+                <input type="date" id="new-order-date" class="p-2 bg-gray-700/50 border border-gray-600 rounded text-white" required />
+                <input type="number" step="0.01" id="new-order-amount" placeholder="Amount" class="p-2 bg-gray-700/50 border border-gray-600 rounded text-white placeholder-gray-400" required />
+                <select id="new-order-status" class="p-2 bg-gray-700/50 border border-gray-600 rounded text-white" required>
+                    <option value="Pending">Pending</option>
+                    <option value="Paid">Paid</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+                <button type="submit" class="p-2 bg-green-600 rounded text-white font-semibold hover:bg-green-700">Add Order</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="order-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-2xl border border-gray-700 shadow-2xl w-full max-w-2xl p-6 transform scale-95 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 id="order-modal-title" class="text-2xl font-bold text-white">Add New Order</h2>
+                <button id="close-order-modal-btn" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            
+            <form id="order-form" class="space-y-3">
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="order-date" class="col-span-1 text-gray-300">Date</label>
+                    <input type="date" id="order-date" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="order-full-name" class="col-span-1 text-gray-300">Full-Name</label>
+                    <input type="text" id="order-full-name" class="form-input col-span-2 bg-gray-600" disabled>
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="track-no" class="col-span-1 text-gray-300">Track-no</label>
+                    <input type="text" id="track-no" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="country" class="col-span-1 text-gray-300">Country</label>
+                    <input type="text" id="country" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="company" class="col-span-1 text-gray-300">Company Name</label>
+                    <input type="text" id="company" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="all-cost" class="col-span-1 text-gray-300">All-cost</label>
+                    <input type="number" step="0.01" id="all-cost" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="all-weight" class="col-span-1 text-gray-300">All-weight</label>
+                    <input type="number" step="0.01" id="all-weight" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="weight" class="col-span-1 text-gray-300">weight</label>
+                    <input type="number" step="0.01" id="weight" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="p-per-kg" class="col-span-1 text-gray-300">P-per kg</label>
+                    <input type="number" step="0.01" id="p-per-kg" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="shipping-cost" class="col-span-1 text-gray-300">Shipping-Cost</label>
+                    <input type="number" step="0.01" id="shipping-cost" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="in-ship-cost" class="col-span-1 text-gray-300">in-ship-cost</label>
+                    <input type="number" step="0.01" id="in-ship-cost" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="in-shipping" class="col-span-1 text-gray-300">in-shipping</label>
+                    <input type="number" step="0.01" id="in-shipping" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="purches-prof" class="col-span-1 text-gray-300">purches prof</label>
+                    <input type="number" step="0.01" id="purches-prof" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="mo-received" class="col-span-1 text-gray-300">Mo-received</label>
+                    <input type="number" step="0.01" id="mo-received" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="total-profit" class="col-span-1 text-gray-300">Total-Profit</label>
+                    <input type="number" step="0.01" id="total-profit" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="date-arrival" class="col-span-1 text-gray-300">Date-arrival</label>
+                    <input type="date" id="date-arrival" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="cash-back" class="col-span-1 text-gray-300">Cash-Back</label>
+                    <input type="number" step="0.01" id="cash-back" class="form-input col-span-2">
+                </div>
+                <div class="grid grid-cols-3 items-center gap-4">
+                    <label for="all-cash-backs" class="col-span-1 text-gray-300">All-Cash-Backs</label>
+                    <input type="number" step="0.01" id="all-cash-backs" class="form-input col-span-2">
+                </div>
+
+                <div class="flex justify-end gap-3 mt-8">
+                    <button type="button" id="order-cancel-btn" class="px-4 py-2 bg-gray-600 text-white rounded-none hover:bg-gray-500">Cancel</button>
+                    <button type="submit" id="submit-order-btn" class="px-4 py-2 bg-green-600 text-white rounded-none hover:bg-green-700">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Row Details Modal -->
+    <div id="row-details-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 invisible opacity-0">
+        <div class="modal-content bg-gray-800 rounded-2xl border border-gray-700 shadow-2xl w-full max-w-3xl p-6 transform scale-95 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-4">
+                <h2 id="row-details-modal-title" class="text-2xl font-bold text-white">Row Details</h2>
+                <button id="row-details-close" class="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <div id="row-details-body" class="text-gray-100 text-sm"></div>
+            <div class="flex justify-end gap-3 mt-6">
+                <button id="row-details-close-2" class="px-4 py-2 bg-gray-600 rounded-lg text-white hover:bg-gray-500">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification" class="px-6 py-3 bg-gray-800 text-white text-lg rounded-full shadow-2xl">
+        <span id="notification-text"></span>
+    </div>
+
+    <!-- This is the container for the printable receipt -->
+    <div class="printable-receipt-container">
+        <div class="print-header">
+            <div class="print-logo-area">
+                <!-- IMPORTANT: Replace this src with the actual URL to your logo -->
+                <img src="https://i.imgur.com/r9b7w7a.png" alt="Garmian Trading Logo" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/80x80/cccccc/000000?text=Logo';">
+                <div class="print-logo-text">
+                    <h1>گه رمیان تره یدینگ</h1>
+                    <p>بؤ بازرگانی و گواستنه وه ی نیوده وله تی</p>
+                </div>
+            </div>
+        </div>
+        <div class="print-title-bar">پسوله ی پاره دان</div>
+        <div class="print-info-section">
+            <div class="print-info-left">
+                <p><span>به ریز:</span> <span id="print-name"></span></p>
+                <p><span>ژ. مؤبایل:</span> <span id="print-phone"></span></p>
+            </div>
+            <div class="print-info-right">
+                <p><span>به روار:</span> <span id="print-date"></span></p>
+            </div>
+        </div>
+        <table class="print-main-content">
+            <thead>
+                <tr>
+                    <th>دینار</th>
+                    <th>دؤلار</th>
+                    <th>جؤری کار</th>
+                    <th>تیبینی</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="print-iqd"></td>
+                    <td id="print-usd"></td>
+                    <td id="print-work-type"></td>
+                    <td id="print-note"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="print-footer">
+            <div class="total-section">
+                <span>کۆی گشتی:</span>
+                <span id="print-total"></span>
+            </div>
+            <div class="contact-info">
+                <div class="left">Email: garmian.trading@gmail.com</div>
+                <div class="right">
+                    <p>که لار/ناوبازار/ته لاری شیخ جه عفه ر</p>
+                    <p>م. گؤران: 0771 758 47 54</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
